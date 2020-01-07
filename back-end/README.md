@@ -14,6 +14,8 @@ A starter template for express application
 |:---:|:---:|
 |httpsConfig|edit configs/app.config.js to start https|
 |auto reboot|restart app after modifying file|
+|mysql connect|base mysql connection|
+|mongodb connect|base mongodb connection|
 |response format|format response data|
 |build|use webpack to get bundle file|
 

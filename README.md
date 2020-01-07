@@ -28,7 +28,16 @@ yarn start
 
 ## 问题解决
 
+
 ## 参考 & 引用
 https://blog.csdn.net/qq_33206732/article/details/79877948
+
 https://www.runoob.com/mongodb/mongodb-tutorial.html
+
 https://www.cnblogs.com/pl-boke/p/10063351.html
+
+https://www.runoob.com/mongodb/mongodb-databases-documents-collections.html
+
+http://www.mongoosejs.net/docs/index.html
+
+http://www.mongoosejs.net/docs/guide.html
