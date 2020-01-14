@@ -17,7 +17,7 @@ export default {
 		mongodbConfig: {
 			host: 'localhost',
 			port: '27017',
-			dbName: ''
+			dbName: 'start-node-mongodb'
 		}
 	}
 };

@@ -7,5 +7,14 @@ export default {
       information: msg.infor,
       data: msg.data
     }
+  },
+  error: function (msg) {
+    return {
+      success: false,
+      status: -1,
+      api: msg.api,
+      information: msg.infor,
+      data: msg.data
+    }
   }
 }

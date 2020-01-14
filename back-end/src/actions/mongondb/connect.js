@@ -7,7 +7,7 @@ const { host, port, dbName } = config.mongodb.mongodbConfig;
 const url = `mongodb://${host}:${port}/${dbName}`;
 const db = mongoose.connection;
 mongoose.connect(url);
-db.on('connected', () => {
+db.once('connected', () => {
   console.log('mongo connect Success');
 });
 export default mongoose;

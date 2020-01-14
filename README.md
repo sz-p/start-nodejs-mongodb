@@ -27,6 +27,19 @@ yarn start
 2. mongodb 设置用户名和密码
 
 ## 问题解决
+HTML文档
+
+function
+
+object
+
+object更新
+
+循环引用
+
+无限 & NaN
+
+
 
 
 ## 参考 & 引用
