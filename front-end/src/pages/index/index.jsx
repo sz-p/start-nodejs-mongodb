@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import styles from "./index.scss";
 import { Link } from 'react-router-dom';
+import CtlSpace from '../../components/ctl-space/ctl-space';
+import StatusSpace from '../../components/status-space/status-space';
+import ViewSpace from '../../components/view-space/view-space';
 
 function IndexPage() {
-  // const [count, setCount] = useState(0);
   return (
     <div className={styles.page}>
-      <div className={styles.helloword}>
-        <p>helloword</p>
-      </div>
-      <Link to={'/about'}>about</Link>
+      <CtlSpace />
+      <ViewSpace />
+      <StatusSpace />
     </div>
   );
 }
