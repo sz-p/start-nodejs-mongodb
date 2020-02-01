@@ -3,7 +3,7 @@ import mongoose from './connect';
 // console.log(mongoose.Schema.Types);
 const collectionDocument = new mongoose.Schema({
   UUID: { type: String, index: true, required: true },
-  testFunction: { type: Code },
+  testFunction: { type: Object },
   testExp: { type: Object },
   testBASE64IMG: { type: String },
   testdate: { type: Date, default: Date.now },

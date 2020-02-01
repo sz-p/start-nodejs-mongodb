@@ -1,4 +1,15 @@
-.component{
-  background-color: #fff;
-  width: 30%;
+.component {
+	background-color: #fff;
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	.buttonBox {
+    margin: 10px 10%;
+    max-width: 200px;
+    text-align: right;
+    .button{
+      display: inline-block;
+      width: 100%;
+    }
+	}
 }
