@@ -8,7 +8,7 @@
 目前所遇到的坑
 
 0. 数据库是否支持多属性字段
-    ![](./doc/dbattr.jpg)
+    ![](https://img.sz-p.cn/startmongodb-dbattr.jpg)
     数据库本身是支持Code Reg Date 以及 NaN Infinitely 存储的
 
 1. 数据库到后端的通讯 复杂对象如何传递
@@ -16,11 +16,11 @@
     以nodejs比较易上手的`mongoose`库为例
     后端API调用
     
-    ![](./doc/backendSend.jpg)
+    ![](https://img.sz-p.cn/startmongodb-backendSend.jpg)
 
     数据库接收
 
-    ![](./doc/dbget.jpg)
+    ![](https://img.sz-p.cn/startmongodb-dbget.jpg)
     
     这里仍然丢失了`Code` 和 `Reg` 字段
 
@@ -31,11 +31,11 @@
 
     原对象：
     
-    ![](./doc/originObj.jpg)
+    ![](https://img.sz-p.cn/startmongodb-originObj.jpg)
     
     发送的对象：
 
-    ![](./doc/sendObj.jpg)
+    ![](https://img.sz-p.cn/startmongodb-sendObj.jpg)
 
     这里前端发送的请求就已经出错
 
