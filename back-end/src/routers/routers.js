@@ -10,6 +10,6 @@ export default [
   ['/getalldata', 'get', getalldataHandle],
   ['/getdatabyuuid', 'get', getdatabyuuidHandle],
   ['/removedatabyuuid', 'get', removedatabyuuidHandle],
-  ['/set2db', 'get', set2dbHandle],
+  ['/set2db', 'post', set2dbHandle],
   ['/updatedata', 'get', updatedataHandle],
 ];
