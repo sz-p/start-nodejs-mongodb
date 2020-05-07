@@ -4,14 +4,18 @@ import routers from './routers/routers';
 import https from 'https';
 import fs from 'fs';
 import bodyParser from 'body-parser';
+import cors from "./loader/cors";
 
-const { PORT } = appConfig;
+const { PORT, whitelist } = appConfig;
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ limit: '16mb', extended: false }));
 
+if (whitelist.enable) {
+  app.use(cors(whitelist.allowedOrigin))
+}
 // init routers
 routers.forEach((item) => {
 	app[item[1]](item[0], (req, res) => {
