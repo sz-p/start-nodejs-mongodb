@@ -13,25 +13,25 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 
-const createLocalStore = function () {
-  if (process.env.NODE_ENV === 'production') {
-    return createStore(reducer, applyMiddleware(promiseMiddleware));
-  } else {
-    return createStore(reducer, composeWithDevTools(applyMiddleware(promiseMiddleware)));
-  }
+const createLocalStore = function() {
+	if (process.env.NODE_ENV === 'production') {
+		return createStore(reducer, applyMiddleware(promiseMiddleware));
+	} else {
+		return createStore(reducer, composeWithDevTools(applyMiddleware(promiseMiddleware)));
+	}
 };
-let store = createLocalStore();
+export const store = createLocalStore();
 
 function App() {
-  return (
-    <Provider store={store}>
-      <BrowserRouter basename={window.location.pathname}>
-        <div id="container">
-          <Route exact path={'/'} component={IndexPage} />
-        </div>
-      </BrowserRouter>
-    </Provider>
-  );
+	return (
+		<Provider store={store}>
+			<BrowserRouter basename={window.location.pathname}>
+				<div id="container">
+					<Route exact path={'/'} component={IndexPage} />
+				</div>
+			</BrowserRouter>
+		</Provider>
+	);
 }
 
 export default hot(module)(App);
