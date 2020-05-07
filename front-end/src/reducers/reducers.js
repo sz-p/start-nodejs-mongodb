@@ -7,23 +7,28 @@ Reducers 指定了应用状态的变化如何响应 actions 并发送到 store �
 import * as type from '../actions/actionType';
 import initialState from './initialState';
 const actionsCase = () => {
-  const change_page = (state, action) => {
-    return Object.assign({}, state, {
-      page: action.payload
-    });
-  };
-  return new Map([
-    [type.CHANGE_PAGE, change_page],
-  ])
-}
+	const get_allData = (state, action) => {
+		return Object.assign({}, state, {
+			dataValue: action.payload
+		});
+	};
+	const get_status = (state, action) => {
+		return Object.assign({}, state, {
+			statusValue: action.payload
+		});
+	};
+	return new Map([
+    [ type.GET_ALLDATA, get_allData ],
+    [ type.GET_STATUS, get_status ]
+   ]);
+};
 function reducer(state = initialState, action) {
-  const actionFunction = actionsCase().get(action.type);
-  if (typeof actionFunction === 'function') {
-    return actionFunction(state, action);
-  }
-  else {
-    return state;
-  }
+	const actionFunction = actionsCase().get(action.type);
+	if (typeof actionFunction === 'function') {
+		return actionFunction(state, action);
+	} else {
+		return state;
+	}
 }
 
-export default reducer
+export default reducer;
